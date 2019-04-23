@@ -46,9 +46,9 @@ def getAsciiImage(imageFile, maxWidth, maxHeight):
     # Delete the current buffer so that we dont overwrite the real image file
     vim.command("bd!")
     # get a new buffer
-    # enew is safe enough since we did not specified a buftype, so we
+    # vnew is safe enough since we did not specified a buftype, so we
     # cannot save this
-    vim.command("enew")
+    vim.command("vnew")
 
     # clear the buffer
     vim.current.buffer[:] = None
